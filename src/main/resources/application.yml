@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8070}
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:5555/taskmanager
+    username: root
+    password: root
+  flyway:
+    url: jdbc:mysql://localhost:5555
+    user: root
+    password: root
+    schemas: taskmanager
+    baseline-on-migrate: true
