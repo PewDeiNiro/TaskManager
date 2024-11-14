@@ -1,7 +1,7 @@
-package com.sevsu.taskmanager.mapper;
+package com.pewde.taskmanager.mapper;
 
-import com.sevsu.taskmanager.exception.HttpException;
-import com.sevsu.taskmanager.response.ExceptionResponse;
+import com.pewde.taskmanager.exception.HttpException;
+import com.pewde.taskmanager.response.ExceptionResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
