@@ -1,4 +1,4 @@
-package com.sevsu.taskmanager.exception;
+package com.pewde.taskmanager.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,5 +13,9 @@ public class HttpException extends RuntimeException{
     private int code;
 
     private HttpStatus status;
+
+    public HttpException(String message) {
+        super(message);
+    }
 
 }
