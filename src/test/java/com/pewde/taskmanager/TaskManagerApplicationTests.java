@@ -1,4 +1,4 @@
-package com.sevsu.taskmanager;
+package com.pewde.taskmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
