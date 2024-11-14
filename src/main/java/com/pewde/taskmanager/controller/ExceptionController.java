@@ -1,8 +1,8 @@
-package com.sevsu.taskmanager.controller;
+package com.pewde.taskmanager.controller;
 
-import com.sevsu.taskmanager.exception.HttpException;
-import com.sevsu.taskmanager.mapper.ExceptionMapper;
-import com.sevsu.taskmanager.response.ExceptionResponse;
+import com.pewde.taskmanager.exception.HttpException;
+import com.pewde.taskmanager.mapper.ExceptionMapper;
+import com.pewde.taskmanager.response.ExceptionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
