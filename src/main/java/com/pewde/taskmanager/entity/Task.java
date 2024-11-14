@@ -1,6 +1,7 @@
-package com.sevsu.taskmanager.entity;
+package com.pewde.taskmanager.entity;
 
-import com.sevsu.taskmanager.enums.Status;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.pewde.taskmanager.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,10 +32,12 @@ public class Task {
     @Column(name = "comment")
     private String comment;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "customer_id")
     private User customer;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "executor_id")
     private User executor;

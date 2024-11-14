@@ -1,4 +1,4 @@
-package com.sevsu.taskmanager.entity;
+package com.pewde.taskmanager.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,10 +25,10 @@ public class User {
     @Column(name = "user_password")
     private String password;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "customer")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "customer")
     private List<Task> orders;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "executor")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "executor")
     private List<Task> tasks;
 
 }
