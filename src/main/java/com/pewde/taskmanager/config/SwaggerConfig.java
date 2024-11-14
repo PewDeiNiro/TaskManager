@@ -1,4 +1,4 @@
-package com.sevsu.taskmanager.config;
+package com.pewde.taskmanager.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;

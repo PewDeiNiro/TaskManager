@@ -1,4 +1,4 @@
-package com.sevsu.taskmanager.config;
+package com.pewde.taskmanager.config;
 
 import org.flywaydb.core.Flyway;
 import org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy;
