@@ -1,4 +1,4 @@
-package com.sevsu.taskmanager.response;
+package com.pewde.taskmanager.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
