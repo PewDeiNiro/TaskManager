@@ -1,7 +1,7 @@
 package com.pewde.taskmanager.request.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.pewde.taskmanager.request.TokenRequest;
+import com.pewde.taskmanager.request.WithTokenRequest;
 import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Schema(description = "Запрос на создание задачи")
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateTaskRequest extends TokenRequest {
+public class CreateTaskRequest extends WithTokenRequest {
 
     @NotNull
     @Schema(description = "Уникальный идентификатор пользователя")

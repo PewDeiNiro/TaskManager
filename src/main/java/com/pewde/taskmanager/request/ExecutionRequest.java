@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Schema(description = "Запрос на прикрепление/открепление исполнителя")
 @NoArgsConstructor
 @AllArgsConstructor
-public class ExecutionRequest extends TokenRequest{
+public class ExecutionRequest extends WithTokenRequest {
 
     @NotNull
     @Schema(description = "Уникальный идентификатор пользователя")

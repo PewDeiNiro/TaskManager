@@ -1,7 +1,7 @@
 package com.pewde.taskmanager.request.user;
 
 import com.pewde.taskmanager.enums.Status;
-import com.pewde.taskmanager.request.TokenRequest;
+import com.pewde.taskmanager.request.WithTokenRequest;
 import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Schema(description = "Запрос на обновление статуса задачи исполнителем")
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateStatusRequest extends TokenRequest {
+public class UpdateStatusRequest extends WithTokenRequest {
 
     @NotNull
     @Schema(description = "Уникальный идентификатор пользователя")

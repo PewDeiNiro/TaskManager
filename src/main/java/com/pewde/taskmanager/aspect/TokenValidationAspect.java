@@ -2,7 +2,7 @@ package com.pewde.taskmanager.aspect;
 
 import com.pewde.taskmanager.exception.InvalidTokenException;
 import com.pewde.taskmanager.exception.TokenExpiredException;
-import com.pewde.taskmanager.request.TokenRequest;
+import com.pewde.taskmanager.request.WithTokenRequest;
 import com.pewde.taskmanager.token.Token;
 import lombok.SneakyThrows;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -18,7 +18,7 @@ public class TokenValidationAspect {
     @Around("execution(* com.pewde.taskmanager.service.UserService.*(..))")
     public Object aroundTokenValidationAdvice(ProceedingJoinPoint joinPoint){
         Object[] params = joinPoint.getArgs();
-        if (params.length == 1 && params[0] instanceof TokenRequest request){
+        if (params.length == 1 && params[0] instanceof WithTokenRequest request){
             request.setToken(Token.getTokenFromAuthorization(request.getToken()));
             if (!Token.checkAuthentication(request.getUserId(), request.getToken())){
                 throw new InvalidTokenException();
